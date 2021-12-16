@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
 /*Configurações universais*/
 *{
     box-sizing: border-box;
@@ -25,7 +27,7 @@ header{
     height: 78vh;
     display: flex;
     justify-content: center;
-    background-image: url('/Assets/star\ uó\ topo.png');
+    background-image: url('./Assets/star\ uó\ topo.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -70,7 +72,7 @@ header{
     top: 1vh;
     left: 15.5vw;
     z-index: 1;
-    background-image: url('/Assets/Kylo-Ren-banner\ sem\ fundo.png');
+    background-image: url('./Assets/Kylo-Ren-banner\ sem\ fundo.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -98,7 +100,6 @@ header{
     margin-top: 48vh;
     margin-right: 10vw;
     align-self: baseline;
-    /*background-color: #A9BDC1;*/
 }
 
 .subcontainer .info-pages #text1{
@@ -151,12 +152,13 @@ main {
     width: 100%;
     height: auto;
     display: flex;
+    position: relative;
 }
 
 /*Configurando a secção 'ABOUT'*/
 .about{
     width: 100%;
-    height: 133vh;
+    height: 115vh;
     position: relative;
     z-index: 0;
     display: flex;
@@ -165,43 +167,121 @@ main {
 }
 
 .about .battle-zone img{
-    height: 133vh;
+    height: 115vh;
     position: absolute;
     z-index: 0;
-    /*border: 1px solid black;*/
 }
 
 .about .about-the-game{
     width: 80vw;
-    height: 40%;
-    margin: 0 15vh 10vw 15vw;;
+    height: 40vh;
+    margin: 15vh 0 10vw 15vw;;
     position: absolute;
-    z-index: 2;
-    background-color: tomato;
-    opacity: 0.5;
-    /*border: 1px solid black;*/
+    opacity: 1;
 }
 
 .about-the-game .start-to-play{
-  width: 15vw;
+  width: 20vw;
   height: 60vh;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   position: absolute;
   bottom: 0;
-  z-index: 2.5; /*tem que estar acima do z do kyle ren*/
-  background-color: rgb(172, 176, 238);
+  z-index: 100; /*???????????*/
+  background-image: url('./Assets/strom\ trupe\ red.png');
+  background-repeat: no-repeat;
+  background-size: contain;
   opacity: 1;
+}
+
+.start-to-play h1{
+    width: min-content;
+    font-size: 250%;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.start-to-play p{
+    width: 84%;
+    font-size: 81%;
+    font-weight: 300;
+}
+
+.start-to-play button{
+    width: 50%;
+    height: 8.5%;
+    font-size: 81%;
+    font-weight: normal;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: transparent;
+    background-repeat: no-repeat;        
+    overflow: hidden;
+    outline: none;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .about-the-game .battlefront{
     width: 50vw;
-    height: 25vh;
-    /*margin: 0 15vh 10vw 15vw;*/
+    height: 30vh;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
     position: absolute;
     bottom: 0;
     left: 30vw;
-    z-index: 2.5; /*tem que estar acima do z do kyle ren*/
-    background-color: rgb(172, 176, 238);
     opacity: 1;
+}
+
+.battlefront .text{
+    width: 22vw;
+    height: 30vh;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    right: 26vw;
+}
+
+.text .text-title{
+    width: 22 vw;
+    height: 3vh;
+    font-size: 115%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.battlefront .text hr{
+    width: 8vw;
+    position: absolute;
+    right: 0vw;
+    bottom: 2vh;
+    border: 0.125vh solid #000;
+}
+
+.text .text-content{
+    width: 24vw;
+    height: 20vw;
+    font-size: 80%;
+    position: absolute;
+    top: 10vh;
+    right: 0vw;
+}
+
+.battlefront figure{
+    width: 25vw;
+    height: 30vh;
+    position: absolute;
+    right: 0;
+    background-image: url('./Assets/star\ wars\ frente\ de\ batalha.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .about hr{
@@ -212,3 +292,38 @@ main {
     border: 0.3vh solid #707070;
 }
 
+.about .game-structure{
+    width: 80vw;
+    height: 48vh;
+    display: flex;  
+    position: absolute;
+    top: 66vh;
+    right: 3.5vw;
+    justify-content: space-around;
+    background-color: tomato;
+    opacity: 1;
+}
+
+.game-structure .lord-sifh{
+    width: 22vw;
+    height: 54vh;
+    background-color: violet;
+    border: 3px solid black;
+    opacity: 1;
+}
+
+.game-structure .options{
+    width: 22vw;
+    height: 48vh;
+    background-color: blue;
+    border: 3px solid black;
+    opacity: 1;
+}
+
+.game-structure .rey{
+    width: 22vw;
+    height: 54vh;
+    background-color: greenyellow;
+    border: 3px solid black;
+    opacity: 1;
+}
